@@ -16,6 +16,11 @@ spring:
   h2:
     console:
       enabled: true
+  rabbitmq:
+    listener:
+      simple:
+        # Si un mensaje falla no se vuelve a encolar (no se repite)
+        default-requeue-rejected: false
 
 eureka:
   client:
